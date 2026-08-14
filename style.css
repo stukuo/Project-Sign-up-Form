@@ -1,0 +1,19 @@
+@font-face {
+    /* font-family = Define Font Name To Use */
+    font-family: 'Norse';
+    src: url(Assets/fonts/Norse.otf)format('opentype') ;
+    font-weight: 400;
+    font-style: normal;
+
+    /* swap = Font Use System First n When Finish Download Swap to Original Font */
+    font-display: swap;
+}
+
+/* Bold Version */
+@font-face {
+    font-family: 'Norse';
+    src: url(Assets/fonts/Norsebold.otf)format('opentype') ;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
