@@ -1,80 +1,181 @@
 @font-face {
-    /* font-family = Define Font Name To Use */
-    font-family: 'Norse';
-    src: url(Assets/fonts/Norse.otf)format('opentype') ;
-    font-weight: 400;
-    font-style: normal;
+  /* font-family = Define Font Name To Use */
+  font-family: "Norse";
+  src: url(Assets/fonts/Norse.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
 
-    /* swap = Font Use System First n When Finish Download Swap to Original Font */
-    font-display: swap;
+  /* swap = Font Use System First n When Finish Download Swap to Original Font */
+  font-display: swap;
 }
 
 /* Bold Version */
 @font-face {
-    font-family: 'Norse';
-    src: url(Assets/fonts/Norsebold.otf)format('opentype') ;
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Norse";
+  src: url(Assets/fonts/Norsebold.otf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --p-font-size: 1.125rem;
 }
 
 /* Reset Browser Css */
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Remove Browser Styling */
+input {
+  /* Remove Browser Behavior */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  appearance: none; /* Removes OS-specific native rendering */
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    border: 1px solid;
+  display: flex;
+  min-height: 100vh;
 }
 
 /* HERO SECTION */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30vw;
+
+  background-image: url("Assets/Image.jpg");
+  background-size: cover;
 }
 
-.hero > .container{
-    display: flex;
-    align-items: center;
-    background: red;
+.hero > .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
-    font-family: 'Norse';
-    font-weight: bold;
-    font-size: 4rem;
+  font-family: "Norse";
+  font-weight: bold;
+  color: white;
+  font-size: 4rem;
 }
 
 /* MAIN SECTION */
 
 .content {
-    flex: 1;
-    align-content: center;
-
-    border: 1px solid black;
+  flex: 1;
+  align-content: center;
+  padding: 1rem;
 }
+
+.content-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-inner > .description {
+  font-size: var(--p-font-size);
+  margin-bottom: 2rem;
+}
+
+/* FORM SECTION */
 
 .form {
-    border: 1px solid;
+  border: 2px solid lightgray;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
 }
 
-.form .flex-container{
-    display: flex;
-    border: 1px solid;
+.form > .header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
+
+.form .flex-container {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 4rem;
+}
+
+.flex-container > .col {
+  flex: 1;
+}
+
+/* FORM INPUT */
 
 .form .group-input {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
-.col {
-    border: 1px solid;
+.group-input > label,
+input {
+  font-size: var(--p-font-size);
+}
+
+.group-input > label {
+  margin-bottom: 0.5rem;
+}
+
+.group-input > input {
+  display: block;
+  border: 2px solid lightgray;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.group-input > input:focus {
+  border-color: rgb(23, 152, 217);
+}
+
+.group-input > input:user-invalid {
+  border-color: rgb(204, 68, 68);
+}
+
+/* Form Button */
+.form button {
+    font-size: var(--p-font-size);
+    padding: 0.75rem 2rem;
+    color: white;
+
+    border-radius: 0.25rem;
+
+    /* background-color: rgb(23, 143, 203); */
+    background-color: #596D48;
+}
+
+.form button:hover {
+    background-color: #495a3a;
 }
