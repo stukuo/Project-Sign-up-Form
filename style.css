@@ -17,3 +17,64 @@
     font-style: normal;
     font-display: swap;
 }
+
+/* Reset Browser Css */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    border: 1px solid;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: gray;
+}
+
+.hero > .container{
+    display: flex;
+    align-items: center;
+    background: red;
+}
+
+.hero h1 {
+    font-family: 'Norse';
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+/* MAIN SECTION */
+
+.content {
+    flex: 1;
+    align-content: center;
+
+    border: 1px solid black;
+}
+
+.form {
+    border: 1px solid;
+}
+
+.form .flex-container{
+    display: flex;
+    border: 1px solid;
+}
+
+.form .group-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.col {
+    border: 1px solid;
+}
