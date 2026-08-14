@@ -106,7 +106,7 @@ body {
 
 .content-inner > .description {
   font-size: var(--p-font-size);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 /* FORM SECTION */
@@ -178,4 +178,8 @@ input {
 
 .form button:hover {
     background-color: #495a3a;
+}
+
+.is-invalid{
+    border-color: rgb(204, 68, 68) !important;
 }
